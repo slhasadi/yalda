@@ -15,8 +15,8 @@ const Game = () => {
             <p className="text-[18px]">{"(بازی)"}</p>
           </div>
           <p className=" px-3 text-[13px] md:text-[25px] mb-[20px] text-white text-center">
-            پیش‌بینی کنید و برنده جوایز ارزشمندی شوید! کافی است پیگیر اخبار
-            تیم‌ها باشید تا نتایج مسابقات
+            شب یَلدا یا شب چلّه یکی از کهن‌ترین جشن‌های ایرانی است و از شامگاه
+            سه شنبه ۳۰ آذر تا بامداد روز اول دی ماه سال ۱۴۰۱ هست.
           </p>
           <div className="w-full h-[50px] relative flex justify-center items-center">
             <Link href="https://dorehami.keylid.com/">
