@@ -1,0 +1,25 @@
+@import "../../assets/styles/variables.scss";
+.astrologyCardContainer{
+    width: 100%;
+    .astrologyCardTop{
+        width: 85%;
+        margin: 0 auto 0.5rem;
+        border-radius: 5px;
+        height: 3rem;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 1rem;
+        background-size: 100%;
+        .icon{
+            width: 12px;
+            height: 12px;
+            object-fit: contain;
+        }
+        .title{
+            color: $secondary-text-color;
+            font-size: 0.7rem;
+            font-weight: 500;
+        }
+    }
+}

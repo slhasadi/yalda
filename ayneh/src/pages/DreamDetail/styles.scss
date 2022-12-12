@@ -1,0 +1,18 @@
+@import "../../assets/styles/variables.scss";
+.dreamDetailPageContainer{
+    .main{
+        background-color: $primary-color-light;
+        min-height: calc(100vh - 48px);
+        flex-direction: column;
+        .desc{
+            font-size: 0.7rem;
+            padding: 0 1rem;
+            text-align: justify;
+            line-height: 1.85;
+        }
+        .title{
+            color: $primary-color;
+            padding:1rem 1rem 0;
+        }
+    }
+}

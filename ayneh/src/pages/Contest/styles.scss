@@ -1,0 +1,16 @@
+@import "../../assets/styles/variables.scss";
+.contestContainer{
+    .main{
+        padding-top: 1rem;
+        height: calc(100vh - 3rem);
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        .item{
+            width: 45%;
+            height: 4rem;
+            background-color: $secondary-color;
+        }
+    }
+}

@@ -1,0 +1,12 @@
+@import "../../assets//styles/variables.scss";
+.splashContainer{
+    background-color: $secondary-color;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .logo{
+        width: 200px;
+        height: auto;
+    }
+}
