@@ -1,0 +1,53 @@
+version: '3'
+
+services:
+  landings_next_1:
+    container_name: landings_next_1
+    restart: always
+    image: gitlab.keylid.com:5005/tika/digikala/landings/thirdparty/base_landing_web:latest
+    command:
+      [
+          "sh",
+          "-c",
+          "pm2-runtime start --max-memory-restart 4G npm --name landings -- start",
+      ]
+    volumes:
+      - /var/www/landings_next/static/cache_images:/app/.next/cache/images
+    ports:
+      - 9101:3000
+    extra_hosts:
+      - "api.prediction.tika-team.ir:172.16.20.184"
+
+  landings_next_2:
+    container_name: landings_next_2
+    restart: always
+    image: gitlab.keylid.com:5005/tika/digikala/landings/thirdparty/base_landing_web:latest
+    command:
+      [
+          "sh",
+          "-c",
+          "pm2-runtime start --max-memory-restart 4G npm --name landings -- start",
+      ]
+    volumes:
+      - /var/www/landings_next/static/cache_images:/app/.next/cache/images
+    ports:
+      - 9102:3000
+    extra_hosts:
+      - "api.prediction.tika-team.ir:172.16.20.184"
+
+  landings_next_3:
+    container_name: landings_next_3
+    restart: always
+    image: gitlab.keylid.com:5005/tika/digikala/landings/thirdparty/base_landing_web:latest
+    command:
+      [
+          "sh",
+          "-c",
+          "pm2-runtime start --max-memory-restart 4G npm --name landings -- start",
+      ]
+    volumes:
+      - /var/www/landings_next/static/cache_images:/app/.next/cache/images
+    ports:
+      - 9103:3000
+    extra_hosts:
+      - "api.prediction.tika-team.ir:172.16.20.184"

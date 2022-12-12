@@ -1,0 +1,10 @@
+@font-face {
+    font-family: 'IranNastaliq';
+    src: url('IranNastaliq.ttf') format('truetype');
+    font-weight: 100;
+    font-style: normal;
+    font-display: swap;
+}
+.IranNastaliq{
+    font-family: "IranNastaliq" !important;
+}

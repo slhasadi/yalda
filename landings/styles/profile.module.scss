@@ -1,0 +1,31 @@
+.title-slider {
+  .swiper-wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around !important;
+  }
+}
+
+.postal-card {
+  .swiper-wrapper {
+    display: flex;
+    flex-direction: row;
+
+    justify-content: flex-start;
+    @media screen and (min-width: 1249px) {
+      justify-content: center;
+    }
+  }
+}
+
+.gallery-image {
+  span {
+    width: 100% !important;
+    height: 100% !important;
+  }
+}
+.show-gallery {
+  .swiper-wrapper {
+    align-items: center;
+  }
+}

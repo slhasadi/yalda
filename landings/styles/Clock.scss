@@ -1,0 +1,46 @@
+.clock {
+  .analog-clock {
+    width: 250px;
+    height: 250px;
+    position: relative;
+    background-image: url("/landings/_next/image?url=/landings/images/calendar/clock/analog.svg&w=48&q=75");
+    background-size: 250px 250px;
+    background-repeat: no-repeat;
+    .dial {
+      position: absolute;
+      width: 50px;
+      height: 50px;
+      transform-origin: bottom left;
+      &.seconds {
+        img {
+          position: absolute;
+          left: -3.5px;
+          height: 30px;
+          top: 16px;
+        }
+        left: 128px;
+        top: 87px;
+      }
+      &.minutes {
+        img {
+          position: absolute;
+          left: -2.5px;
+          height: 42px;
+          top: 6px;
+        }
+        left: 128px;
+        top: 87px;
+      }
+      &.hours {
+        img {
+          position: absolute;
+          left: -2px;
+          height:36px;
+          top: 12px;
+        }
+        left: 128px;
+        top: 87px;
+      }
+    }
+  }
+}

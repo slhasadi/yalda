@@ -1,0 +1,508 @@
+@import "./global";
+
+.player {
+  &-outer-container-xl {
+    position: fixed;
+    transition: bottom 0.5s;
+    left: 0px;
+    height: 75px;
+    z-index: 10;
+    overflow: hidden;
+    border-radius: 0px;
+    direction: ltr;
+    @include row-center();
+    background-color: white;
+    box-shadow: 0px -1px 6px #e5e8ed;
+    width: 100%;
+    display: none;
+    @media screen and (min-width: 768px) {
+      display: flex;
+    }
+  }
+  &-inner-container-xl {
+    width: 98%;
+    height: 100%;
+    @include row-center();
+    justify-content: space-between;
+  }
+  &-data {
+    &-outer-container-xl {
+      width: 25%;
+      @include row-center();
+      justify-content: flex-end;
+    }
+    &-inner-container-xl {
+      width: 100%;
+      @include row-center();
+      justify-content: flex-end;
+      position: relative;
+    }
+    &-close-button-xl {
+      color: #8f9bb3;
+      margin-left: 20px;
+      font-size: 18px;
+      cursor: pointer;
+    }
+    &-container-xl {
+      @include column-center();
+      margin-right: 10px;
+      align-items: flex-end;
+      width: calc(100% - 60px);
+    }
+    &-image-xl {
+      height: 50px;
+      width: 50px;
+      overflow: hidden;
+      border-radius: 8px;
+    }
+    &-song-xl {
+      @include iranyekan();
+      color: #131415;
+      font-size: 15px;
+      font-weight: 600;
+      margin-top: 0px;
+      margin-bottom: 10px;
+      width: 100%;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      overflow: hidden;
+      text-decoration: none;
+    }
+    &-icon-xl {
+      position: absolute;
+      left: 50px;
+      top: 5px;
+      height: 20px;
+      cursor: pointer;
+    }
+    &-loader {
+      &-container-xs {
+        position: absolute;
+        left: 50px;
+        top: 5px;
+        height: 20px;
+        cursor: pointer;
+      }
+      &-xs {
+        display: flex;
+      }
+    }
+    &-singer-xl {
+      @include iranyekan();
+      color: #8f9bb3;
+      font-size: 13px;
+      font-weight: 300;
+      margin: 0px;
+      width: 100%;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      overflow: hidden;
+    }
+  }
+  &-tools {
+    &-outer-container-xl {
+      width: 50%;
+      @include row-center();
+    }
+    &-inner-container-xl {
+      width: 100%;
+      @include column-center();
+    }
+  }
+  &-icon {
+    &-outer-container-xl {
+      width: 100%;
+      @include row-center();
+    }
+    &-inner-container-xl {
+      width: 100%;
+      @include row-center();
+      justify-content: space-between;
+    }
+    &-loader {
+      &-container-xl {
+        height: 40px;
+        width: 40px;
+        @include row-center();
+      }
+      &-xl {
+        display: flex;
+      }
+    }
+    &-next-xl {
+      height: 20px;
+    }
+    &-previous-xl {
+      height: 20px;
+    }
+    &-play-xl {
+      height: 40px;
+      cursor: pointer;
+    }
+    &-forward-xl {
+      height: 30px;
+      margin-top: -10px;
+      cursor: pointer;
+    }
+    &-backward-xl {
+      height: 30px;
+      margin-top: -10px;
+      cursor: pointer;
+    }
+    &-repeat-xl {
+      height: 20px;
+      cursor: pointer;
+    }
+    &-shuffle-xl {
+      height: 20px;
+      cursor: pointer;
+    }
+  }
+  &-playlist {
+    &-outer-container-xl {
+      @include column-center();
+      justify-content: flex-start;
+      position: fixed;
+      bottom: 75px;
+      background-color: #fff;
+      height: 300px;
+      width: 290px;
+      box-shadow: 0px -1px 2px #e5e8ed;
+    }
+    &-inner-container-xl {
+      width: 90%;
+      @include column-center();
+      justify-content: flex-start;
+      align-items: flex-end;
+    }
+    &-icon-xl {
+      cursor: pointer;
+      margin-right: 15px;
+      margin-left: 15px;
+      height: 14px;
+    }
+    &-close-button-xl {
+      color: #000000;
+      font-size: 22px;
+      cursor: pointer;
+      position: absolute;
+      left: 15px;
+      top: 15px;
+    }
+    &-title-xl {
+      @include iranyekan();
+      font-size: 14px;
+      color: #131415;
+      margin-top: 10px
+    }
+    &-count-xl {
+      @include iranyekan();
+      font-size: 14px;
+      color: #8f9bb3;
+      font-weight: 300;
+      margin: 16px 0;
+    }
+    &-list {
+      &-outer-container-xl {
+        width: 100%;
+        @include column-center();
+      }
+      &-inner-container-xl {
+        width: 100%;
+        @include column-center();
+        justify-content: flex-start;
+        overflow-y: scroll;
+        height: 200px;
+        &::-webkit-scrollbar {
+          display: flex !important;
+          width: 4px;
+        }
+        &::-webkit-scrollbar-track {
+          background-color: #e4e9f2;
+          overflow: hidden;
+          border-radius: 4px;
+        }
+        &::-webkit-scrollbar-thumb {
+          background-color: #8f9bb3;
+          overflow: hidden;
+          border-radius: 4px;
+        }
+      }
+      &-item {
+        &-outer-container-xl {
+          width: 100%;
+          @include row-center();
+          margin-bottom: 10px;
+          position: relative;
+        }
+        &-inner-container-xl {
+          width: calc(100% - 10px);
+          @include row-center();
+          justify-content: flex-end;
+          margin-right: 10px;
+          border-bottom: solid 0.5px rgba(#8f9bb3, 0.2);
+          padding-bottom: 5px;
+        }
+        &-cover-xl {
+          height: 50px;
+          width: 50px;
+          overflow: hidden;
+          border-radius: 8px;
+          object-fit: cover;
+          cursor: pointer;
+        }
+        &-equalizer-xl {
+          position: absolute;
+          left: 0px;
+        }
+        &-data {
+          &-container-xl {
+            height: 50px;
+            @include column-center();
+            align-items: flex-end;
+            justify-content: flex-start;
+            margin-right: 10px;
+          }
+          &-title-xl {
+            @include iranyekan();
+            color: #222b45;
+            font-size: 13px;
+            margin: 0px;
+            margin-top: 5px;
+            cursor: pointer;
+            width: 140px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+          }
+          &-singer-xl {
+            @include iranyekan();
+            font-size: 12px;
+            color: #8f9bb3;
+            font-weight: 300;
+            margin: 0px;
+            margin-top: 10px;
+            width: 140px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+          }
+        }
+        &-duration-xl {
+          @include iranyekan();
+          position: absolute;
+          left: 5px;
+          font-size: 12px;
+          font-weight: 300;
+          color: rgba(#222b45, 0.6);
+        }
+      }
+    }
+  }
+  &-sound {
+    &-outer-container-xl {
+      width: 25%;
+      @include row-center();
+      justify-content: flex-start;
+    }
+    &-inner-container-xl {
+      width: 80%;
+      @include row-center();
+      justify-content: flex-start;
+    }
+    &-bar {
+      &-container-xl {
+        width: 100px;
+      }
+      &-icon-xl {
+        cursor: pointer;
+        margin-right: 10px;
+      }
+    }
+  }
+  &-progress-bar {
+    &-outer-container-xl {
+      width: 120%;
+      @include row-center();
+      margin-top: 2px;
+    }
+    &-inner-container-xl {
+      width: 100%;
+      @include row-center();
+      justify-content: space-between;
+    }
+    &-container-xl {
+      width: 80%;
+    }
+  }
+  &-time {
+    &-container-xl {
+      text-align: center;
+      width: 10%;
+      margin: 0px;
+    }
+    &-segment-xl {
+      @include iranyekan();
+      color: #222b45;
+      opacity: 0.5;
+      font-size: 13px;
+      margin: 0px;
+      font-weight: 300;
+    }
+  }
+  &-playlist-modal {
+    &-outer-container-xl {
+      position: fixed;
+      top: 0px;
+      left: 0px;
+      right: 0px;
+      bottom: 0px;
+      background-color: rgba(0, 0, 0, 0.8);
+      z-index: 10;
+      @include row-center();
+    }
+    &-inner-container-xl {
+      width: 300px;
+      @include column-center();
+      justify-content: flex-start;
+      min-height: 100px;
+      background-color: #1b1d26;
+      overflow: hidden;
+      border-radius: 10px;
+    }
+    &-top {
+      &-container-xl {
+        height: 35px;
+        overflow: hidden;
+        border-radius: 17px;
+        width: 100%;
+        @include row-center();
+        justify-content: flex-end;
+        background-color: #784ac4;
+        margin-top: -17px;
+        margin-bottom: 12px;
+      }
+      &-title-xl {
+        @include iranyekan();
+        color: white;
+        font-size: 13px;
+        margin-right: 20px;
+        font-size: 12px;
+        font-weight: 300;
+      }
+    }
+    &-list {
+      &-item {
+        &-container-xl {
+          width: 100%;
+          @include row-center();
+          justify-content: flex-end;
+          margin-top: 5px;
+        }
+        &-selected-xl {
+          margin-right: 15px;
+          margin-left: 15px;
+          height: 12px;
+          width: 12px;
+          overflow: hidden;
+          border-radius: 50%;
+          background-color: #784ac4;
+          border: solid 3px white;
+          cursor: pointer;
+        }
+        &-not-selected-xl {
+          margin-right: 15px;
+          margin-left: 15px;
+          height: 12px;
+          width: 12px;
+          overflow: hidden;
+          border-radius: 50%;
+          background-color: white;
+          border: solid 3px white;
+          cursor: pointer;
+        }
+        &-title-xl {
+          @include iranyekan();
+          color: white;
+          font-size: 12px;
+        }
+        &-hr-xl {
+          border: 0px;
+          width: 100%;
+          border-top: solid 0.2px rgba(white, 0.5);
+          margin: 0px;
+          margin-top: 20px;
+        }
+      }
+    }
+    &-add {
+      &-title {
+        &-xl {
+          @include iranyekan();
+          color: white;
+          font-size: 12px;
+          width: 90%;
+          height: 20px;
+          text-align: right;
+          cursor: pointer;
+          position: relative;
+          // @include row-center();
+        }
+        &-plus-xl {
+          margin-left: 20px;
+          font-size: 15px;
+          position: absolute;
+          right: 0px;
+        }
+        &-description-xl {
+          font-size: 12px;
+          position: absolute;
+          right: 30px;
+          top: 2px;
+        }
+      }
+      &-input-xl {
+        @include iranyekan();
+        border: 0px;
+        background-color: transparent;
+        &::placeholder {
+          font-size: 12px;
+          color: rgba(white, 0.5);
+        }
+        outline: none;
+        width: 90%;
+        caret-color: white;
+        border-bottom: solid 1px white;
+        height: 20px;
+        padding-bottom: 5px;
+        color: rgba(white, 0.5);
+      }
+      &-hr-xl {
+        border: 0px;
+        width: 100%;
+        border-top: solid 0.2px rgba(white, 0.5);
+        margin: 0px;
+        margin-top: 20px;
+      }
+      &-button-xl {
+        height: 26px;
+        width: 120px;
+        overflow: hidden;
+        border-radius: 13px;
+        background-color: #784ac4;
+        color: white;
+        font-size: 12px;
+        @include iranyekan();
+        @include row-center();
+        outline: none;
+        border: 0px;
+        margin-top: 15px;
+        margin-bottom: 15px;
+        cursor: pointer;
+      }
+      &-button-loading-xl {
+        @include row-center();
+      }
+    }
+  }
+}

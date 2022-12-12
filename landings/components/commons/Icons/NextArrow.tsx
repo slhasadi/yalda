@@ -1,0 +1,8 @@
+const NextArrow = () => {
+    return <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+        <path id="Path_1" data-name="Path 1" d="M0,0H24V24H0Z" fill="none"/>
+        <path id="Path_2" data-name="Path 2" d="M9.31,6.71a1,1,0,0,0,0,1.41L13.19,12,9.31,15.88a1,1,0,0,0,1.41,1.41l4.59-4.59a1,1,0,0,0,0-1.41L10.72,6.7A1,1,0,0,0,9.31,6.71Z" fill="#7b7f85"/>
+    </svg>
+}
+
+export default NextArrow;

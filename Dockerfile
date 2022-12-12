@@ -1,22 +1,36 @@
-# build environment
-FROM gitlab.keylid.com:5005/tika/infra/base_image/node:10.17 as builder
+FROM gitlab.keylid.com:5005/tika/infra/base_image/node:16.13.2
 
-RUN mkdir /usr/src/app
-WORKDIR /usr/src/app
-ENV PATH /usr/src/app/node_modules/.bin:$PATH
+# Check https://github.com/nodejs/docker-node/tree/b4117f9333da4138b03a546ec926ef50a31506c3#nodealpine to understand why libc6-compat might be needed.
+RUN apt-get update && apt-get install --no-install-recommends -y libc6-dev
 
-COPY ayneh/package.json /usr/src/app/package.json
-RUN npm install
-RUN npm install react-scripts@1.1.1 -g
+WORKDIR /app
+COPY landings/package.json ./
+COPY landings/.npmrc ./
 
-COPY ayneh /usr/src/app
-RUN GENERATE_SOURCEMAP=false npm run build
+ENV PATH /app/node_modules/.bin:$PATH
+RUN yarn install
 
-# production environment
-FROM gitlab.keylid.com:5005/tika/infra/base_image/nginx:1.17-alpine as release
+ARG PATH_ENVS=production
+COPY landings .
+RUN echo "NEXT_PUBLIC_PATH_ENVS=${PATH_ENVS}" >> .env.production
+RUN echo "NEXT_PUBLIC_APP_VERSION=1" >> .env.production
+RUN yarn build
+RUN yarn global add pm2
 
-RUN rm -rf /etc/nginx/conf.d
-COPY conf /etc/nginx
-COPY --from=builder /usr/src/app/build /usr/share/nginx/html
-EXPOSE 80
-CMD ["nginx", "-g", "daemon off;"]
+ARG APP_ENV=production
+ARG NODE_ENV=production
+ARG PORT=3000
+
+ENV APP_ENV=${APP_ENV} \
+    NODE_ENV=${NODE_ENV} \
+    PORT=${PORT} \
+# This allows to access Graphql Playground
+    APOLLO_PRODUCTION_INTROSPECTION=false
+
+RUN mkdir -p /app/.next/cache/images
+
+EXPOSE ${PORT}
+
+
+#CMD ["npm", "start"]
+#CMD ["sh", "-c", "pm2-runtime start npm --name landings -- start"]

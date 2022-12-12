@@ -1,0 +1,44 @@
+@mixin scroll-top-bottom-commons {
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  height: 40px;
+  position: absolute;
+}
+
+#scroll-top-img {
+  @include scroll-top-bottom-commons;
+  background-image: url("/landings/_next/image?url=/landings/images/haffez/haffez-scroll-top.png&w=1080&q=75");
+  top: -38px;
+  left: -2px;
+  z-index: 1001;
+}
+
+#scroll-bottom-img {
+  @include scroll-top-bottom-commons;
+  background-image: url("/landings/_next/image?url=/landings/images/haffez/haffez-scroll-bottom.png&w=1080&q=75");
+  bottom: -40px;
+  left: -4px;
+  z-index: 1000;
+}
+
+#contentWrapper {
+  background-image: url("/landings/_next/image?url=/landings/images/haffez/haffez-scroll-body-opened.png&w=1080&q=75");
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  height: 0
+}
+
+#scrollWrapper {
+  filter: drop-shadow(2px 4px 9px #00000050);
+}
+
+@media screen and (max-width: 380px) {
+  #contentWrapper,
+  #scroll-top-img,
+  #scroll-bottom-img
+  {
+    background-size: calc(100% + 20px) 100%;
+    background-position-x: -15px;
+  }
+}

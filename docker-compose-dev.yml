@@ -1,0 +1,26 @@
+version: '3'
+
+services:
+  landings_next:
+    container_name: landings_next
+    restart: always
+    image: gitlab.keylid.com:5005/tika/digikala/landings/thirdparty/base_landing_web:develop
+    command:
+      [
+          "sh",
+          "-c",
+          "pm2-runtime start --max-memory-restart 1G npm --name landings -- start",
+      ]
+    volumes:
+      - /var/www/landings_next/static/cache_images:/app/.next/cache/images
+    ports:
+      - 9098:3000
+    extra_hosts:
+      - "api.landings.q00p.ir:182.19.0.7"
+    networks:
+      landings_landings:
+        ipv4_address: 182.19.0.5
+
+networks:
+  landings_landings:
+    external: true

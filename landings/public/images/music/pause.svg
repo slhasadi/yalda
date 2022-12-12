@@ -1,0 +1,13 @@
+<svg id="play_circle_filled_black_24dp" xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40">
+  <path id="Path_10677" data-name="Path 10677" d="M0,0H40V40H0Z" fill="none"/>
+  <g id="pause_circle_filled_black_24dp">
+    <g id="Group_2789" data-name="Group 2789">
+      <rect id="Rectangle_681" data-name="Rectangle 681" width="40" height="40" fill="none"/>
+      <rect id="Rectangle_682" data-name="Rectangle 682" width="40" height="40" fill="none"/>
+      <rect id="Rectangle_683" data-name="Rectangle 683" width="40" height="40" fill="none"/>
+    </g>
+    <g id="Group_2790" data-name="Group 2790" transform="translate(3.333 3.333)">
+      <path id="Path_10679" data-name="Path 10679" d="M18.667,2A16.667,16.667,0,1,0,35.333,18.667,16.673,16.673,0,0,0,18.667,2ZM17,25.333H13.667V12H17Zm6.667,0H20.333V12h3.333Z" transform="translate(-2 -2)" fill="#db0031"/>
+    </g>
+  </g>
+</svg>

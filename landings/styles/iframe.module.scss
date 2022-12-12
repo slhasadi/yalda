@@ -1,0 +1,24 @@
+.iframe{
+  width: 100% !important;
+  //   overflow: "auto",
+    position: absolute;
+    height: 4150px;
+  overflow: hidden;
+}
+.parent_frame{
+  width: 100% !important;
+  height: 7600px;
+  position: absolute;
+  overflow: hidden;
+  margin: 0 auto;
+  display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.iframe2{
+  width: 70% !important;
+  //   overflow: "auto",
+    position: absolute;
+    height: 100%;
+  overflow: hidden;
+}

@@ -1,0 +1,42 @@
+.payment {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #fff;
+    margin: 20px auto;
+    max-width: 500px;
+  
+    &__title {
+      margin-bottom: 32px;
+      color: #fff;
+    }
+    &__button {
+      border-radius: 15px;
+      padding: 16px;
+      border: 1px solid #fff;
+      z-index: 30;
+      color: #fff;
+    }
+    &__logo {
+      width: 100%;
+      img {
+        width: 100%;
+      }
+      div {
+        &.back-btn {
+          width: 250px;
+          margin: 40px auto;
+          text-align: center;
+          height: 40px;
+          line-height: 40px;
+          background: linear-gradient(180deg, #5c45cf, #4332bc);
+          color: white;
+          border-radius: 10px;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+  

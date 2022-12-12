@@ -1,0 +1,80 @@
+.prediction-card-accurate {
+  border: 2px solid var(--color-success);
+  .label {
+    color: white;
+    background-color: var(--color-success);
+  }
+  .score {
+    color: var(--color-success);
+  }
+}
+
+.prediction-card-goal {
+  border: 2px solid var(--color-info);
+  .label {
+    color: white;
+    background-color: var(--color-info);
+  }
+  .score {
+    color: var(--color-info);
+  }
+}
+
+.prediction-card-correct {
+  border: 2px solid var(--color-warning);
+  .label {
+    color: white;
+    background-color: var(--color-warning);
+  }
+  .score {
+    color: var(--color-warning);
+  }
+}
+
+.prediction-card-wrong {
+  border: 2px solid var(--color-danger);
+  .label {
+    color: white;
+    background-color: var(--color-danger);
+  }
+  .score {
+    color: var(--color-danger);
+  }
+}
+
+
+.table-row-wrong {
+  background-color: var(--color-danger);
+}
+
+.table-row-correct {
+  background-color: var(--color-warning);
+}
+
+.table-row-goal {
+  background-color: var(--color-info);
+}
+
+.table-row-accurate {
+  background-color: var(--color-success);
+}
+
+.table-row-undefined {
+  background-color: #F3F4F5;
+  color: var(--color-dark) !important;
+}
+
+
+.last-winner-box {
+  position: absolute;
+  .number {
+    direction: ltr;
+  }
+  &.first {
+  }
+  &.second {
+  }
+
+  &.third {
+  }
+}

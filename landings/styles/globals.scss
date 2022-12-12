@@ -1,0 +1,170 @@
+@import "../fonts/Nastaligh/IranNast.css";
+@import "../fonts/YekanBakh/stylesheet.scss";
+@import "../styles/normalize.scss";
+@import "./plyr.scss";
+@import "./Clock.scss";
+@import "./profile.module.scss";
+@import "./music.scss";
+@import "./haffez.page.scss";
+@import 'pages-tab';
+@import "prediction";
+@import "modal";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@layer components {
+  button {
+    @apply hover:scale-105 active:scale-100 transition px-4 font-medium rounded-lg;
+  }
+  .active {
+    @apply bg-primary text-white fill-white
+  }
+
+  .divider {
+    @apply bg-divider h-[8px] mt-[30px] mb-[30px]
+  }
+}
+
+:root {
+  --plyr-color-main: #ea2e42;
+  --color-primary: #e64a19;
+  --color-dark-primary: #E64A19;
+  --color-light-primary: #FFCCBC;
+  --color-secondary: #959FA8;
+  --color-light-secondary: #BDBDBD;
+  --color-dark: #212121;
+  --color-success: #2DCC70;
+  --color-info: #7C4DFF;
+  --color-warning: #FF9800;
+  --color-danger: #E91E63;
+  --color-default: 'inheriat';
+}
+
+select:focus {
+  --tw-ring-color: #EC6823 !important;
+}
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: 'Yekan Bakh FaNum', Tahoma, serif;
+  font-size: 16px;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+input::-webkit-outer-spin-button, input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+
+input {
+  -moz-appearance: textfield;
+}
+
+.disabled-element {
+  opacity: 0;
+}
+.disabled-element2 {
+  opacity: 0;
+}
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+.bg-secondary {
+  background-color: var(--color-secondary);
+}
+.bg-warning {
+  background-color: var(--color-warning);
+}
+.swiper-3d .swiper-slide-shadow-left{
+  background-image: none !important;
+}
+.swiper-3d .swiper-slide-shadow-right{
+  background-image: none !important;
+}
+.swiper{
+  height: 100%;
+}
+.main-loader{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.flag-radius img{
+  border-radius: 50px;
+}
+.news-rich-text {
+  .image {
+    text-align: center;
+  }
+
+  img {
+    display: inline-block;
+    margin-top: 12px;
+    margin-bottom: 16px;
+  }
+
+  p:only-child {
+    margin-right: auto;
+    margin-left: auto;
+  }
+}
+
+.ball-swiper {
+  .swiper-button-next, .swiper-button-back {
+    top: 35px;
+  }
+  .swiper-slide {
+    width: min-content !important;
+  }
+}
+
+.bg-success {
+  background-color: var(--color-success) !important;
+}
+.swiper-slide-visible{
+  filter: grayscale(70%);
+}
+.swiper-slide-active{
+  filter: grayscale(0%);
+}
+.main-nav-list-ul-active{
+  position: relative;
+}
+.main-nav-list-ul-active::after{
+  content: "";
+  width: 100%;
+  height: 4px;
+  background-color: white;
+  position: absolute;
+  bottom: -12px;
+  right: 0;
+}
+
+.dir-ltr{
+  direction: ltr;
+}
+.parent-skeletion span{
+  display: flex;
+  background-color: red;
+  width: 100%;
+  max-width: 100%;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+input[type=number] {
+  -moz-appearance: textfield;
+}

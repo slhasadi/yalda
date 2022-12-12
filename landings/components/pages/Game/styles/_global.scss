@@ -1,0 +1,30 @@
+@mixin column-center() {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+@mixin row-center() {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+@mixin bg-color() {
+  background-color: #8A1538;
+  color: #fff;
+}
+@mixin second-bg-color(){
+  background-color: #BB778C;
+  color: #000;
+}
+@mixin third-bg-color(){
+  background-color: #BDBDBD;
+  color: #000;
+}
+@mixin timer-bg-color(){
+  background-color: #fff;
+  color: #000;
+}
+
+

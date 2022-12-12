@@ -1,9 +1,0 @@
-version: '3.5'
-
-services:
-  ayneh_web:
-    container_name: ayneh_web
-    restart: always
-    image: gitlab.keylid.com:5005/tika/ayeneh/web:latest
-    ports:
-      - '127.0.0.1:9190:80'

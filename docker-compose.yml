@@ -1,0 +1,13 @@
+version: '3'
+
+services:
+  landings_next:
+    container_name: landings_next
+    restart: always
+    ports:
+      - 80:3000
+    volumes:
+      - /tmp:/app/.next/cache/images
+    build:
+      context: .
+      dockerfile: Dockerfile

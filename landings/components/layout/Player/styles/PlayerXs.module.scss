@@ -1,0 +1,1140 @@
+@import "./global";
+
+.player {
+  &-outer-container-xs {
+    position: fixed;
+    transition: bottom 0.5s;
+    right: 0px;
+    left: 0px;
+    height: 70px;
+    z-index:20;
+    overflow: hidden;
+    border-radius: 20px 20px 0px 0px;
+    @include row-center();
+    background-color: white;
+    box-shadow: 0px -1px 6px #e5e8ed;
+    display: flex;
+  }
+  @media(min-width:480px){
+    &-outer-container-xs{
+      display: none;
+    }
+  }
+  &-inner-container-xs {
+    width: 92%;
+    height: 100%;
+    @include row-center();
+    justify-content: space-between;
+  }
+  &-background-xs {
+    position: fixed;
+    transition: bottom 0.5s;
+    right: 0px;
+    left: 0px;
+    height: 70px;
+    bottom: 0px;
+    z-index: 0;
+    overflow: hidden;
+    border-radius: 20px 20px 0px 0px;
+    @include row-center();
+  }
+  &-data {
+    &-outer-container-xs {
+      width: 80%;
+      height: 100%;
+      @include row-center();
+      justify-content: flex-end;
+    }
+    &-inner-container-xs {
+      width: 100%;
+      @include row-center();
+      justify-content: flex-end;
+    }
+    &-close-button-xs {
+      color: #8f9bb3;
+      margin-right: 15px;
+      font-size: 18px;
+      margin-top: 10px;
+      cursor: pointer;
+    }
+    &-container-xs {
+      @include column-center();
+      margin-right: 10px;
+      align-items: flex-end;
+      width: calc(100% - 60px);
+    }
+    &-image-xs {
+      height: 50px;
+      width: 50px;
+      overflow: hidden;
+      border-radius: 8px;
+    }
+    &-song-xs {
+      @include iranyekan();
+      color: #131415;
+      font-size: 15px;
+      font-weight: 600;
+      margin-top: 0px;
+      margin-bottom: 10px;
+      width: 100%;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      overflow: hidden;
+    }
+    &-singer-xs {
+      @include iranyekan();
+      color: #8f9bb3;
+      font-size: 13px;
+      font-weight: 300;
+      margin: 0px;
+      width: 100%;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      overflow: hidden;
+    }
+  }
+  &-icon {
+    &-outer-container-xs {
+      height: 100%;
+      @include row-center();
+      width: 20%;
+      justify-content: flex-start;
+    }
+    &-inner-container-xs {
+      @include row-center();
+      justify-content: flex-start;
+      height: 100%;
+    }
+    &-xs {
+      height: 45px;
+    }
+    &-loader {
+      &-container-xs {
+        height: 45px;
+        width: 45px;
+        @include row-center();
+      }
+    }
+    &-loader-xs {
+      display: flex;
+    }
+  }
+  &-playlist {
+    &-outer-container-xs {
+      @include column-center();
+      justify-content: flex-end;
+      z-index: 8;
+      width: 100%;
+      margin-top: 100vh;
+      margin-bottom: 20px;
+    }
+    &-inner-container-xs {
+      background-color: white;
+      @include column-center();
+      width: 100%;
+      transition: bottom 0.5s;
+    }
+    &-handle-xs {
+      position: absolute;
+      top: 15px;
+      width: 40px;
+      height: 4px;
+      background-color: rgba(black, 0.3);
+      &:hover {
+        background-color: rgba(black, 0.7);
+      }
+      overflow: hidden;
+      border-radius: 2px;
+    }
+    &-icon-xs {
+      cursor: pointer;
+      margin-right: 15px;
+      margin-left: 15px;
+      height: 22px;
+    }
+    &-title {
+      &-container-xs {
+        width: 100%;
+        @include column-center();
+      }
+      &-xs {
+        @include iranyekan();
+        font-size: 20px;
+        color: #131415;
+        width: 100%;
+        text-align: center;
+        margin-top: 0px;
+        margin-bottom: 16px;
+      }
+      &-count-xs {
+        @include iranyekan();
+        font-size: 16px;
+        color: #8f9bb3;
+        font-weight: 300;
+        margin-top: 0px;
+        width: 100%;
+        text-align: center;
+      }
+    }
+    &-list {
+      &-outer-container-xs {
+        width: 90%;
+        @include column-center();
+      }
+      &-inner-container-xs {
+        width: 100%;
+        @include column-center();
+        justify-content: flex-start;
+        height: 400px;
+        &::-webkit-scrollbar {
+          display: flex;
+          width: 4px;
+        }
+        &::-webkit-scrollbar-track {
+          background-color: #e4e9f2;
+          overflow: hidden;
+          border-radius: 4px;
+        }
+        &::-webkit-scrollbar-thumb {
+          background-color: #8f9bb3;
+          overflow: hidden;
+          border-radius: 4px;
+        }
+      }
+      &-item {
+        &-outer-container-xs {
+          width: 100%;
+          @include row-center();
+          margin-bottom: 10px;
+          position: relative;
+        }
+        &-inner-container-xs {
+          width: calc(100% - 10px);
+          @include row-center();
+          justify-content: flex-end;
+          margin-right: 10px;
+          border-bottom: solid 0.5px rgba(#8f9bb3, 0.2);
+          padding-bottom: 5px;
+          direction: ltr;
+        }
+        &-cover-xs {
+          height: 50px;
+          width: 50px;
+          overflow: hidden;
+          border-radius: 8px;
+          object-fit: cover;
+          cursor: pointer;
+        }
+        &-equalizer-xs {
+          position: absolute;
+          left: 0px;
+        }
+        &-data {
+          &-container-xs {
+            height: 50px;
+            @include column-center();
+            align-items: flex-end;
+            justify-content: flex-start;
+            margin-right: 10px;
+          }
+          &-title-xs {
+            @include iranyekan();
+            color: #222b45;
+            font-size: 13px;
+            margin: 0px;
+            margin-top: 5px;
+            cursor: pointer;
+            width: 140px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+          }
+          &-singer-xs {
+            @include iranyekan();
+            font-size: 12px;
+            color: #8f9bb3;
+            font-weight: 300;
+            margin: 0px;
+            margin-top: 10px;
+            width: 140px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+          }
+        }
+        &-duration-xs {
+          @include iranyekan();
+          position: absolute;
+          left: 5px;
+          font-size: 12px;
+          font-weight: 300;
+          color: rgba(#222b45, 0.6);
+          height: 100%;
+          @include column-center();
+          width: 100px;
+          align-items: flex-end;
+        }
+      }
+    }
+  }
+  &-full {
+    &-outer-container-xs {
+      position: fixed;
+      top: 0px;
+      left: 0px;
+      right: 0px;
+      bottom: 0px;
+      transition: transform 0.5s;
+      z-index: 7;
+      background-color: white;
+      overflow-y: scroll;
+      @include column-center();
+      justify-content: flex-start;
+      display: flex;
+      z-index: 10;
+      @media screen and (min-width: 480px) {
+        display: none;
+      }
+    }
+    &-inner-container-xs {
+      width: 100%;
+      position: fixed;
+      top: 0px;
+      bottom: 0px;
+      @include column-center();
+      justify-content: flex-start;
+    }
+    &-bottom-container-xs {
+      width: 100%;
+      @include column-center();
+      justify-content: space-around;
+      height: calc(100vh - 80px);
+    }
+    &-playback-container-xs {
+      width: 100%;
+      @include column-center();
+    }
+    &-icon {
+      &-container-xs {
+        @include row-center();
+        margin-top: 30px;
+      }
+      &-xs {
+        font-size: 30px;
+        color: #8f9bb3;
+        z-index: 5;
+      }
+    }
+    &-data {
+      &-outer-container-xs {
+        @include row-center();
+        width: 100%;
+      }
+      &-inner-container-xs {
+        @include column-center();
+        width: 90%;
+      }
+      &-cover-xs {
+        height: 180px;
+        width: 180px;
+        overflow: hidden;
+        border-radius: 8px;
+      }
+      &-song-xs {
+        @include iranyekan();
+        @include row-center();
+        color: #131415;
+        font-size: 15px;
+        font-weight: 600;
+        width: 100%;
+        text-align: center;
+        line-height: 25px;
+        margin: 16px 0;
+      }
+      &-singer-xs {
+        @include iranyekan();
+        @include row-center();
+        color: #8f9bb3;
+        font-size: 14px;
+        font-weight: 300;
+        width: 100%;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        margin-top: 0px;
+      }
+    }
+  }
+  &-progress-bar {
+    &-outer-container-xs {
+      width: 90%;
+      height: 50px;
+      @include column-center();
+    }
+    &-inner-container-xs {
+      width: 100%;
+      @include column-center();
+      justify-content: space-between;
+    }
+    &-container-xs {
+      width: 100%;
+    }
+  }
+  &-time {
+    &-outer-container-xs {
+      width: 100%;
+      @include row-center();
+      justify-content: space-between;
+    }
+    &-container-xs {
+      text-align: center;
+    }
+    &-segment-xs {
+      @include iranyekan();
+      color: #222b45;
+      opacity: 0.5;
+      font-size: 14px;
+      font-weight: 300;
+    }
+  }
+  &-primary-icon {
+    &-outer-container-xs {
+      width: 100%;
+      @include row-center();
+      height: 50px;
+    }
+    &-inner-container-xs {
+      width: 90%;
+      @include row-center();
+      justify-content: space-between;
+      direction: ltr;
+    }
+    &-loader {
+      &-container-xs {
+        height: 50px;
+        width: 50px;
+        @include row-center();
+      }
+    }
+    &-loader-xs {
+      display: flex;
+    }
+    &-next-xs {
+      height: 22px;
+      cursor: pointer;
+    }
+    &-previous-xs {
+      height: 22px;
+      cursor: pointer;
+    }
+    &-play-xs {
+      height: 50px;
+      width: 50px;
+      cursor: pointer;
+    }
+    &-forward-xs {
+      height: 30px;
+      margin-top: -10px;
+      cursor: pointer;
+    }
+    &-backward-xs {
+      height: 30px;
+      margin-top: -10px;
+      cursor: pointer;
+    }
+    &-repeat-xs {
+      height: 22px;
+      cursor: pointer;
+    }
+    &-shuffle-xs {
+      height: 22px;
+      cursor: pointer;
+    }
+  }
+  &-second-icon {
+    &-outer-container-xs {
+      width: 100%;
+      @include row-center();
+    }
+    &-inner-container-xs {
+      width: 70%;
+      @include row-center();
+      direction: ltr;
+      justify-content: space-between;
+    }
+    &-container-xs {
+      height: 40px;
+      width: 40px;
+      overflow: hidden;
+      border-radius: 4px;
+      @include row-center();
+      background-color: rgba(#efefef, 0.5);
+    }
+    &-backward-xs {
+      height: 28px;
+      margin-top: -3px;
+      margin-left: 3px;
+    }
+    &-forward-xs {
+      height: 28px;
+      margin-top: -3px;
+      margin-left: 3px;
+    }
+    &-car-xs {
+      height: 25px;
+    }
+  }
+  &-menu {
+    &-button {
+      &-container-xs {
+        @include row-center();
+        position: absolute;
+        top: 30px;
+        right: 20px;
+        left: 20px;
+        @include row-center();
+        justify-content: space-between;
+      }
+      &-xs {
+        color: #8f9bb3;
+        opacity: 0.8;
+        font-size: 18px;
+      }
+      &-queue-xs {
+        width: 15px;
+        height: 15px;
+      }
+    }
+    &-outer-container-xs {
+      position: fixed;
+      right: 0px;
+      left: 0px;
+      bottom: 0px;
+      top: 0px;
+      background-color: rgba(black, 0.5);
+      @include column-center();
+      justify-content: flex-end;
+      z-index: 8;
+    }
+    &-inner-container-xs {
+      overflow: hidden;
+      border-radius: 20px 20px 0px 0px;
+      background-color: white;
+      @include column-center();
+      width: 100%;
+      padding-top: 30px;
+      position: fixed;
+      right: 0px;
+      left: 0px;
+      transition: bottom 0.5s;
+    }
+    &-handle-xs {
+      position: absolute;
+      top: 15px;
+      width: 40px;
+      height: 4px;
+      background-color: rgba(black, 0.3);
+      &:hover {
+        background-color: rgba(black, 0.7);
+      }
+      overflow: hidden;
+      border-radius: 2px;
+    }
+    &-data {
+      &-outer-container-xs {
+        width: 90%;
+        @include row-center();
+        justify-content: flex-end;
+        margin-bottom: 10px;
+      }
+      &-inner-container-xs {
+        width: 100%;
+        @include row-center();
+        justify-content: flex-end;
+      }
+      &-container-xs {
+        @include column-center();
+        margin-right: 10px;
+        align-items: flex-end;
+        width: calc(100% - 60px);
+      }
+      &-image-xs {
+        height: 60px;
+        width: 60px;
+        overflow: hidden;
+        border-radius: 8px;
+      }
+      &-song-xs {
+        @include iranyekan();
+        color: #131415;
+        font-size: 15px;
+        font-weight: 600;
+        margin-top: 0px;
+        margin-bottom: 10px;
+        width: 100%;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden;
+      }
+      &-singer-xs {
+        @include iranyekan();
+        color: #8f9bb3;
+        font-size: 13px;
+        font-weight: 300;
+        margin: 0px;
+        width: 100%;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden;
+      }
+    }
+    &-item {
+      &-outer-container-xs {
+        width: 100%;
+        @include row-center();
+        justify-content: flex-start;
+      }
+      &-inner-container-xs {
+        width: 95%;
+        border-bottom: solid 2px #f3f5fa;
+        @include row-center();
+        flex-direction: row-reverse;
+        justify-content: flex-start;
+        height: 50px;
+      }
+      &-icon-xs {
+        height: 20px;
+        margin-left: 10px;
+      }
+      &-queue-xs {
+        height: 14px;
+        margin-left: 15px;
+      }
+      &-title-xs {
+        color: #8f9bb3;
+        @include iranyekan();
+        font-size: 13px;
+      }
+    }
+  }
+  &-download-modal {
+    &-container-xs {
+      position: fixed;
+      top: 0px;
+      right: 0px;
+      left: 0px;
+      bottom: 0px;
+      background-color: rgba(0, 0, 0, 0.5);
+      z-index: 10;
+      @include column-center();
+    }
+    &-box-xs {
+      width: 300px;
+      background-color: white;
+      min-height: 200px;
+      @include column-center();
+      justify-content: flex-start;
+      overflow: hidden;
+      border-radius: 20px;
+      padding-bottom: 20px;
+    }
+    &-title-xs {
+      @include iranyekan();
+      margin-top: 30px;
+      color: rgba(black, 0.8);
+      font-size: 14px;
+    }
+    &-hr-xs {
+      width: 80%;
+      border: 0px;
+      border-top: solid 0.5px #00000029;
+      margin: 0px;
+      margin-bottom: 3px;
+    }
+    &-link {
+      &-active-xs {
+        @include row-center();
+        height: 35px;
+        width: 180px;
+        overflow: hidden;
+        border-radius: 17px;
+        border: 0px;
+        margin-top: 20px;
+        color: white;
+        @include iranyekan();
+        text-decoration: none;
+      }
+      &-inactive-xs {
+        @include row-center();
+        height: 35px;
+        width: 180px;
+        overflow: hidden;
+        border-radius: 17px;
+        border: 0px;
+        margin-top: 20px;
+        color: rgba(black, 0.5);
+        @include iranyekan();
+        text-decoration: none;
+      }
+    }
+    &-item {
+      &-container-xs {
+        @include column-center();
+        justify-content: space-around;
+        width: 100%;
+        height: 60px;
+      }
+      &-hr-xs {
+        width: 80%;
+        border: 0px;
+        border-top: solid 0.5px #00000029;
+        margin: 0px;
+      }
+      &-text {
+        &-container-active-music-xs {
+          width: 100%;
+          height: 80%;
+          @include row-center();
+          justify-content: space-around;
+          color: white;
+          background-color: #784ac4;
+        }
+        &-container-active-book-xs {
+          background-color: #00af5d;
+          width: 100%;
+          height: 80%;
+          @include row-center();
+          justify-content: space-around;
+          color: white;
+        }
+        &-container-inactive-xs {
+          width: 100%;
+          height: 80%;
+          @include row-center();
+          justify-content: space-around;
+          color: rgba(black, 0.8);
+        }
+        &-title-xs {
+          @include iranyekan();
+          font-size: 13px;
+          margin: 0px;
+          width: 80px;
+          text-align: right;
+        }
+        &-quality-xs {
+          @include iranyekan();
+          // color: rgba(black, 0.8);
+          font-size: 13px;
+          margin: 0px;
+          width: 80px;
+          text-align: left;
+        }
+      }
+    }
+  }
+  &-playlist-modal {
+    &-outer-container-xs {
+      position: fixed;
+      top: 0px;
+      left: 0px;
+      right: 0px;
+      bottom: 0px;
+      background-color: rgba(0, 0, 0, 0.8);
+      z-index: 10;
+      @include row-center();
+    }
+    &-inner-container-xs {
+      width: 300px;
+      @include column-center();
+      justify-content: flex-start;
+      min-height: 100px;
+      background-color: #1b1d26;
+      overflow: hidden;
+      border-radius: 10px;
+    }
+    &-top {
+      &-container-xs {
+        height: 35px;
+        overflow: hidden;
+        border-radius: 17px;
+        width: 100%;
+        @include row-center();
+        justify-content: flex-end;
+        background-color: #784ac4;
+        margin-top: -17px;
+        margin-bottom: 12px;
+      }
+      &-title-xs {
+        @include iranyekan();
+        color: white;
+        font-size: 13px;
+        margin-right: 20px;
+        font-size: 12px;
+        font-weight: 300;
+      }
+    }
+    &-list {
+      &-item {
+        &-container-xs {
+          width: 100%;
+          @include row-center();
+          justify-content: flex-end;
+          margin-top: 5px;
+        }
+        &-selected-xs {
+          margin-right: 15px;
+          margin-left: 15px;
+          height: 12px;
+          width: 12px;
+          overflow: hidden;
+          border-radius: 50%;
+          background-color: #784ac4;
+          border: solid 3px white;
+          cursor: pointer;
+        }
+        &-not-selected-xs {
+          margin-right: 15px;
+          margin-left: 15px;
+          height: 12px;
+          width: 12px;
+          overflow: hidden;
+          border-radius: 50%;
+          background-color: white;
+          border: solid 3px white;
+          cursor: pointer;
+        }
+        &-title-xs {
+          @include iranyekan();
+          color: white;
+          font-size: 12px;
+        }
+        &-hr-xs {
+          border: 0px;
+          width: 100%;
+          border-top: solid 0.2px rgba(white, 0.5);
+          margin: 0px;
+          margin-top: 20px;
+        }
+      }
+    }
+    &-add {
+      &-title {
+        &-xs {
+          @include iranyekan();
+          color: white;
+          font-size: 12px;
+          width: 90%;
+          height: 20px;
+          text-align: right;
+          cursor: pointer;
+          position: relative;
+          // @include row-center();
+        }
+        &-plus-xs {
+          margin-left: 20px;
+          font-size: 15px;
+          position: absolute;
+          right: 0px;
+        }
+        &-description-xs {
+          font-size: 12px;
+          position: absolute;
+          right: 30px;
+          top: 2px;
+        }
+      }
+      &-input-xs {
+        @include iranyekan();
+        border: 0px;
+        background-color: transparent;
+        &::placeholder {
+          font-size: 12px;
+          color: rgba(white, 0.5);
+        }
+        outline: none;
+        width: 90%;
+        caret-color: white;
+        border-bottom: solid 1px white;
+        height: 20px;
+        padding-bottom: 5px;
+        color: rgba(white, 0.5);
+      }
+      &-hr-xs {
+        border: 0px;
+        width: 100%;
+        border-top: solid 0.2px rgba(white, 0.5);
+        margin: 0px;
+        margin-top: 20px;
+      }
+      &-button-xs {
+        height: 26px;
+        width: 120px;
+        overflow: hidden;
+        border-radius: 13px;
+        background-color: #784ac4;
+        color: white;
+        font-size: 12px;
+        @include iranyekan();
+        @include row-center();
+        outline: none;
+        border: 0px;
+        margin-top: 15px;
+        margin-bottom: 15px;
+        cursor: pointer;
+      }
+      &-button-loading-xs {
+        @include row-center();
+      }
+    }
+  }
+  &-speed-menu {
+    &-outer-container-xs {
+      position: fixed;
+      right: 0px;
+      left: 0px;
+      bottom: 0px;
+      top: 0px;
+      background-color: rgba(black, 0.5);
+      @include column-center();
+      justify-content: flex-end;
+      z-index: 8;
+    }
+    &-inner-container-xs {
+      overflow: hidden;
+      border-radius: 20px 20px 0px 0px;
+      background-color: white;
+      @include column-center();
+      width: 100%;
+      padding-top: 30px;
+      position: fixed;
+      right: 0px;
+      left: 0px;
+      transition: bottom 0.5s;
+    }
+    &-handle-xs {
+      position: absolute;
+      top: 15px;
+      width: 40px;
+      height: 4px;
+      background-color: rgba(black, 0.3);
+      &:hover {
+        background-color: rgba(black, 0.7);
+      }
+      overflow: hidden;
+      border-radius: 2px;
+    }
+    &-title-xs {
+      @include iranyekan();
+      color: #222b45;
+      font-size: 18px;
+      margin-top: 10px;
+    }
+    &-option-list {
+      &-outer-container-xs {
+        width: 100%;
+        @include row-center();
+        margin-bottom: 30px;
+        margin-top: 20px;
+      }
+      &-inner-container-xs {
+        width: 90%;
+        @include row-center();
+        flex-wrap: wrap;
+      }
+      &-item {
+        &-container-xs {
+          height: 38px;
+          width: 38px;
+          overflow: hidden;
+          border-radius: 50%;
+          @include row-center();
+          border: solid 1px #8f9bb3;
+          margin: 10px;
+          margin-top: 0px;
+        }
+        &-xs {
+          @include iranyekan();
+          font-size: 12px;
+          margin-top: 5px;
+        }
+      }
+    }
+  }
+  &-driving {
+    &-outer-container-xs {
+      position: fixed;
+      right: 0px;
+      left: 0px;
+      bottom: 0px;
+      top: 0px;
+      background-color: rgba(black, 0.5);
+      @include column-center();
+      justify-content: flex-end;
+      z-index: 7;
+    }
+    &-inner-container-xs {
+      overflow: hidden;
+      border-radius: 20px 20px 0px 0px;
+      background-color: white;
+      @include column-center();
+      width: 100%;
+      position: relative;
+      position: fixed;
+      transition: bottom 0.5s;
+      z-index: 8;
+    }
+    &-handle-xs {
+      position: absolute;
+      top: 15px;
+      width: 40px;
+      height: 4px;
+      background-color: rgba(black, 0.3);
+      &:hover {
+        background-color: rgba(black, 0.7);
+      }
+      overflow: hidden;
+      border-radius: 2px;
+    }
+    &-title-xs {
+      @include iranyekan();
+      color: #222b45;
+      font-size: 18px;
+      margin-top: 35px;
+    }
+    &-loader {
+      &-container-xs {
+        height: 80px;
+        width: 80px;
+        @include row-center();
+      }
+      &-xs {
+        display: flex;
+      }
+    }
+    &-time {
+      &-container-xs {
+        width: 100%;
+        text-align: center;
+      }
+      &-segment-xs {
+        @include iranyekan();
+        font-size: 25px;
+        font-weight: 600;
+      }
+    }
+    &-icon {
+      &-xs {
+        height: 80px;
+        width: 80px;
+      }
+    }
+    &-second-icon {
+      &-outer-container-xs {
+        width: 100%;
+        @include row-center();
+        margin-bottom: 30px;
+        margin-top: 30px;
+      }
+      &-inner-container-xs {
+        width: 60%;
+        @include row-center();
+        flex-direction: row-reverse;
+        justify-content: space-between;
+      }
+      &-xs {
+        height: 60px;
+      }
+    }
+  }
+  &-lyrics {
+    &-outer-container-xs {
+      position: fixed;
+      right: 0px;
+      left: 0px;
+      bottom: 0px;
+      top: 0px;
+      background-color: rgba(black, 0.5);
+      @include column-center();
+      justify-content: flex-end;
+      z-index: 8;
+    }
+    &-inner-container-xs {
+      overflow: hidden;
+      border-radius: 20px 20px 0px 0px;
+      background-color: white;
+      @include column-center();
+      width: 100%;
+      padding-top: 30px;
+      padding-bottom: 20px;
+      transition: bottom 0.5s;
+      position: fixed;
+      right: 0px;
+      left: 0px;
+    }
+    &-handle-xs {
+      position: absolute;
+      top: 15px;
+      width: 40px;
+      height: 4px;
+      background-color: rgba(black, 0.3);
+      &:hover {
+        background-color: rgba(black, 0.7);
+      }
+      overflow: hidden;
+      border-radius: 2px;
+    }
+    &-title-xs {
+      @include iranyekan();
+      color: #222b45;
+      font-size: 18px;
+      margin-top: 10px;
+    }
+    &-container-xs {
+      width: 90%;
+      @include column-center();
+      justify-content: flex-start;
+      height: 400px;
+      overflow-y: scroll;
+      padding-top: 10px;
+      &::-webkit-scrollbar {
+        display: flex !important;
+        width: 6px;
+      }
+      &::-webkit-scrollbar-track {
+        background-color: #e4e9f2;
+        overflow: hidden;
+        border-radius: 4px;
+      }
+      &::-webkit-scrollbar-thumb {
+        background-color: #8f9bb3;
+        overflow: hidden;
+        border-radius: 4px;
+      }
+    }
+    &-xs {
+      width: 70%;
+      text-align: center;
+      color: #8f9bb3;
+      @include iranyekan();
+      font-size: 13px;
+      font-weight: 300;
+      line-height: 30px;
+    }
+  }
+  &-page-loader {
+    &-outer-container-xs {
+      position: fixed;
+      right: 0px;
+      left: 0px;
+      bottom: 0px;
+      top: 0px;
+      background-color: rgba(black, 0.7);
+      @include column-center();
+      z-index: 10;
+    }
+    &-inner-container-xs {
+      width: 100%;
+      @include row-center();
+    }
+  }
+}

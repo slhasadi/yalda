@@ -1,0 +1,40 @@
+@mixin column-center() {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin row-center() {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin iranyekan() {
+  font-family: Yekan Bakh FaNum;
+  direction: rtl;
+}
+
+@keyframes slide-left {
+  from {
+    transform: translate(100vw, 0);
+    opacity: 0;
+  }
+  to {
+    transform: translate(0, 0);
+    opacity: 1;
+  }
+}
+
+@keyframes slide-right {
+  from {
+    transform: translate(-100vw, 0);
+    opacity: 0;
+  }
+  to {
+    transform: translate(0, 0);
+    opacity: 1;
+  }
+}

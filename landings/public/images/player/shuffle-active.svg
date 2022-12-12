@@ -1,0 +1,11 @@
+<svg id="shuffle-active" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+  <path id="Path_10675" data-name="Path 10675" d="M0,0H24V24H0Z" fill="none"/>
+  <g id="shuffle_on_black_24dp">
+    <g id="Group_2791" data-name="Group 2791">
+      <rect id="Rectangle_684" data-name="Rectangle 684" width="24" height="24" fill="none"/>
+    </g>
+    <g id="Group_2792" data-name="Group 2792">
+      <path id="Path_10680" data-name="Path 10680" d="M21,1H3A2.006,2.006,0,0,0,1,3V21a2.006,2.006,0,0,0,2,2H21a2.006,2.006,0,0,0,2-2V3a2.006,2.006,0,0,0-2-2ZM5.41,4l5.18,5.17L9.18,10.59,4,5.42ZM20,20H14V18h2.61l-3.2-3.2,1.42-1.42,3.13,3.13.04.04V14h2Zm0-10H18V7.42L5.41,20,4,18.59,16.58,6H14V4h6Z" fill="#8a1538"/>
+    </g>
+  </g>
+</svg>

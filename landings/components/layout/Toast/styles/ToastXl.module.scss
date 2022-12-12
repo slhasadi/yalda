@@ -1,0 +1,82 @@
+@mixin column-center() {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin row-center() {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.toast {
+  &-outer-container-xl {
+    position: fixed;
+    @media only screen and (min-width: 769px) {
+      @include row-center();
+    }
+    display: none;
+    bottom: 20px;
+    left: 20px;
+    z-index: 99999;
+  }
+  &-inner-container-xl {
+    @include column-center();
+  }
+  &-list {
+    &-outer-container-xl {
+      @include column-center();
+    }
+    &-inner-container-xl {
+      @include column-center();
+    }
+    &-item {
+      &-container-xl {
+        @include row-center();
+        background-color: white;
+        border-radius: 8px;
+        height: 65px;
+        width: 320px;
+        justify-content: flex-end;
+        margin-top: 20px;
+        cursor: pointer;
+        position: relative;
+        box-shadow: 0px 3px 6px #00000029;
+      }
+      &-badge-xl {
+        height: 100%;
+        width: 12px;
+        border-radius: 0px 8px 8px 0px;
+        margin-right: 10px;
+      }
+      &-icon-xl {
+        height: 28px;
+        margin-left: 10px;
+      }
+      &-text {
+        &-container-xl {
+          @include column-center();
+          align-items: flex-end;
+          margin-left: 10px;
+          margin-right: 5px;
+          flex: 0 75%;
+          direction: ltr;
+        }
+        &-title-xl {
+          margin: 0px;
+          font-size: 14px;
+          font-weight: bold;
+          margin-bottom: 4px;
+        }
+        &-xl {
+          margin: 0px;
+          font-weight: 300;
+          line-height: 18px;
+        }
+      }
+    }
+  }
+}

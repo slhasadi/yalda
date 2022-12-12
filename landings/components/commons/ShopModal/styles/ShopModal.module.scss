@@ -1,0 +1,178 @@
+@import "global";
+$base-color: #8A1538;
+.main-page {
+  &-shop-modal {
+    &-outer-container-xs {
+      background-color: rgb(0 0 0 / 72%);
+      position: fixed;
+      inset: 0px;
+      @include row-center();
+      z-index: 9999;
+    }
+    &-inner-container-xs {
+      width: 300px;
+      min-height: 200px;
+      border-radius: 20px;
+      @include column-center();
+      justify-content: flex-start;
+      overflow-x: hidden;
+      background-color: #f2f2f2;
+    }
+    &-top {
+      &-container-xs {
+        width: 300px;
+        height: 5rem;
+        background-color: #7c4dff;
+        @include row-center();
+        justify-content: space-between;
+        padding: 30px;
+        position: fixed;
+        z-index: 999;
+        direction: ltr;
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
+        @include bg-color();
+      }
+      &-title-xs {
+        font-size: 20px;
+        color: white;
+        font-weight: 300;
+        display: inline;
+      }
+      &-image-xs {
+        height: 150px;
+        width: 100%;
+        @include row-center();
+        position: relative;
+      }
+      &-close-xs {
+        cursor: pointer;
+      }
+      &-play {
+        &-container-xs {
+          height: 60px;
+          width: 60px;
+          border-radius: 50%;
+          @include row-center();
+          background-color: #ff9100;
+          position: absolute;
+          bottom: -30px;
+          left: 30px;
+          @include bg-color();
+        }
+        &-xs {
+          margin-left: 4px;
+          @include row-center();
+        }
+      }
+    }
+    &-bottom {
+      &-container-xs {
+        width: 100%;
+        // @include column-center();
+        justify-content: flex-start;
+        padding: 16px;
+        background-color: #f2f2f2;
+        // height: 250px;
+        align-items: center;
+        height: 400px;
+        margin-top: 80px;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        overflow-x: scroll;
+      }
+      &-title-xs {
+        color: white;
+        font-size: 24px;
+        font-weight: bold;
+      }
+      &-text-xs {
+        color: white;
+        font-size: 14px;
+        margin-top: 7px;
+        opacity: 0.8;
+      }
+    }
+    &-item {
+      &-container-xs {
+        width: 90%;
+        @include column-center();
+        justify-content: flex-start;
+        padding: 16px;
+        background-color: #651fff;
+        height: 202px;
+        // align-items: flex-end;
+        border-radius: 15px;
+        position: relative;
+        margin: 0 auto;
+        text-align: center;
+        @include second-bg-color();
+        margin-bottom: 20px;
+        min-height: 202px;
+      }
+      &-image-xs {
+        position: absolute;
+        left: -8px;
+        width: 259px;
+        height: 70px;
+      }
+      &-text-xs {
+        width: 100%;
+        background-color: #2c2583;
+        position: absolute;
+        height: 50px;
+        top: 90px;
+        @include bg-color();
+      }
+      &-text-xs p {
+        color: white;
+        font-size: 14px;
+        font-weight: bold;
+        margin-top: 11px;
+        text-align: center;
+      }
+      &-text-xs p span {
+        color: #fff;
+        font-size: 18px;
+        font-weight: bold;
+        margin-top: 90px;
+        text-align: center;
+        margin-right: 10px;
+      }
+      &-button-xs {
+        padding: 10px 20px;
+        background-color: #ff9100;
+        color: white;
+        border: 0px;
+        width: 50% !important;
+        border-radius: 10px !important;
+        position: absolute;
+        top: 150px;
+        @include bg-color();
+        font-weight: 500;
+      }
+      &-ads-video-xs {
+        padding: 10px 20px;
+        background-color: #ff9100;
+        font-weight: 300;
+        border: 0px;
+        width: 80% !important;
+        border-radius: 10px !important;
+        margin: 0 auto;
+        margin: 20px 0;
+        @include bg-color();
+      }
+      &-ads-video-inactive-xs {
+        padding: 10px 20px;
+
+        color: white;
+        border: 0px;
+        width: 80% !important;
+        border-radius: 10px !important;
+        margin: 0 auto;
+        margin: 20px 0;
+      }
+    }
+  }
+}

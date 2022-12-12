@@ -1,0 +1,27 @@
+.wensday-grid {
+  grid-template-columns: 120px 120px 120px 120px 120px;
+  grid-template-rows: 162px 164px;
+}
+.happy-grid {
+  grid-template-columns: 200px 200px 200px 200px 200px;
+  grid-template-rows: 234px 234px;
+}
+.hide-scroll {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+.hide-scroll::-webkit-scrollbar {
+  display: none;
+}
+.yellow-bar {
+  width: 100%;
+  position: absolute;
+  bottom: 0px;
+}
+.house-grid {
+  grid-template-columns: 197px 197px 197px 197px 197px;
+  grid-template-rows: 146px 146px;
+}
+.divide-color-house-clean {
+  background: linear-gradient(to bottom, #DED9D0 80% , #F2BF4E 20%);
+}

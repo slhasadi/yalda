@@ -1,13 +1,13 @@
 #!/bin/bash
 
-PROJECT_NAME='ayneh'
-SERVER_NAME='tika11'
-SERVER_PATH='/var/www/ayneh/'
+PROJECT_NAME='landings_next'
+SERVER_NAME='tika7'
+SERVER_PATH='/var/www/landings_next/'
 
-CONTAINER_NAME=${PROJECT_NAME}'_web'
+CONTAINER_NAME=${PROJECT_NAME}
 
-COMPOSE_FILE='docker-compose-ayneh-web.yml'
-NGINX_FILE='ayneh_web_nginx.conf'
+COMPOSE_FILE='docker-compose-pro.yml'
+NGINX_FILE='landings_web_nginx.conf'
 
 
 function log() {
@@ -20,7 +20,7 @@ function bash() {
 
 function pull() {
     echo -e "\n ... pull images ... \n"
-    docker-compose -f ${COMPOSE_FILE} pull ${CONTAINER_NAME}
+    docker-compose -f ${COMPOSE_FILE} pull
 }
 
 function up() {
@@ -35,11 +35,11 @@ function remove_unused_image() {
 
 function scp_conf() {
     echo -e "\n ... copy conf files to server ... \n"
-    scp ${COMPOSE_FILE} ${NGINX_FILE} mng-web.sh ${SERVER_NAME}:${SERVER_PATH}
+    scp ${COMPOSE_FILE} ${NGINX_FILE} mng-web_v2.sh ${SERVER_NAME}:${SERVER_PATH}
 }
 
 function issue_https_certificate() {
-    sudo certbot --nginx certonly -d ayneh.tika-team.ir
+    sudo certbot --nginx certonly -d sports.vidaneh.com
     sudo ln -s ${SERVER_PATH}/${NGINX_FILE} /etc/nginx/sites-enabled/${NGINX_FILE}
     sudo service nginx restart
 }
