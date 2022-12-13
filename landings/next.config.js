@@ -18,9 +18,6 @@ const nextConfig = {
     disableStaticImages: true,
     minimumCacheTTL: 3600,
   },
-  output: {
-    hashFunction: "sha256",
-  },
   basePath: "",
   // async redirects() {
   //   return [

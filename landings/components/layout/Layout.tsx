@@ -13,12 +13,9 @@ const Layout = ({ children }: Props) => {
   return (
     <>
       <Meta />
-      {router.asPath.split("/")[1] === "sessionplay" ||
-      router.asPath.includes("/groups") ? (
-        <></>
-      ) : (
-        <Header />
-      )}
+
+      <Header />
+
       {children}
       <Toast />
       {router.pathname.split("/")[1] === "sessionplay" ? "" : <Player />}

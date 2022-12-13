@@ -73,19 +73,12 @@ const Header = () => {
         <></>
       )}
       <LogoHeader />
-      {router.pathname === "/" ||
-      router.pathname === "/dashboard" ||
-      router.pathname === "/loader" ||
-      router.pathname === "/stadium/[slug]" ? (
-        <></>
-      ) : (
-        <header className="w-full">
-          <TopBanner />
-          {/* <CountDown /> */}
-          {/* <PagesTab /> */}
-          {/* {!user?.subscription?.subscribed && <BuySub />} */}
-        </header>
-      )}
+      <header className="w-full">
+        <TopBanner />
+        {/* <CountDown /> */}
+        {/* <PagesTab /> */}
+        {/* {!user?.subscription?.subscribed && <BuySub />} */}
+      </header>
       <ShopModal />
     </>
   );

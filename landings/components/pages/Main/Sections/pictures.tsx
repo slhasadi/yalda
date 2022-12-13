@@ -16,8 +16,8 @@ const Picture = () => {
             <p className="text-[18px]">{"(عکس یلدایی)"}</p>
           </div>
           <p className=" px-3 text-[13px] md:text-[25px] text-white text-center my-2">
-            شب یَلدا یا شب چلّه یکی از کهن‌ترین جشن‌های ایرانی است و از شامگاه
-            سه شنبه ۳۰ آذر تا بامداد روز اول دی ماه سال ۱۴۰۱ هست.
+            پیش‌بینی کنید و برنده جوایز ارزشمندی شوید! کافی است پیگیر اخبار
+            تیم‌ها باشید تا نتایج مسابقات
           </p>
         </div>
         <div className="w-full md:w-[50%] m-auto overflow-x-hidden">

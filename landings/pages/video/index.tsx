@@ -24,21 +24,7 @@ const MusicLanding = () => {
   const [footerPage, setFooterPage] = useState<any>([]);
   const pageData = useSelector((state: RootState) => state.pages.list);
   const [loading, setLoading] = useState(false);
-  const feedList = [
-    "vidaneh_worldcup",
-    "video",
-    "hashie-World-Cup",
-    "tourist_wourd_cup",
-    "iran_wourd_cup",
-    "qatar-stadium",
-    "World_Cup_fans",
-    "World_Cup_referees",
-    "Different-world-cup",
-    "world-cup-finals",
-    "world-cup-2018",
-    "Introducing_the_World_Cup_teams",
-    "World_Cup_animations",
-  ];
+  const feedList = ["Coffee_Shop", "noosh_jan", "zalam_zimbo"];
   const [cookies] = useCookies(["lnd_org"]);
   useEffect(() => {
     if (window.innerWidth > 768) {

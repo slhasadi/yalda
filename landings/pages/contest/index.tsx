@@ -23,21 +23,25 @@ const ContestListPage = (props: any) => {
       });
   };
   return (
-    <div className="contestContainer">
+    <div className="bg-gradient-to-b from-[#2D2360] to-[#201C42] pt-16">
       <div className="header">
-        <div className="back" onClick={() => props.history.goBack()}>
-          {/* <img src={Back} alt="back" className="backIcon" /> */}
-        </div>
-        <p className="pageTitle">{"سفر به درون"}</p>
+        <Link href="/">
+          <a className="text-white flex absolute top-[20px] left-[10px] z-[161]">
+            بازگشت
+            <img
+              src="/images/parallax/back.svg"
+              alt="back"
+              className="backIcon"
+            />
+          </a>
+        </Link>
       </div>
-      <div className="main">
+      <div className="flex flex-col items-center">
         {contestList.map((con: any, index) => (
-          <Link
-            href={`/contest/${con.id}`}
-            key={con.id + "-" + index}
-            className="item"
-          >
-            <h5 className="title">{con.title}</h5>
+          <Link href={`/contest/${con.id}`} key={con.id + "-" + index}>
+            <a className="bg-[#433A7D] w-[300px] h-[100px] rounded-md flex items-center justify-center text-[#fff] my-[10px]">
+              {con.title}
+            </a>
           </Link>
         ))}
       </div>

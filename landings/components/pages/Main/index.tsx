@@ -6,7 +6,7 @@ import Video from "./Sections/video";
 import Travel from "./Sections/travel";
 import Particle from "./Sections/particle";
 import Game from "./Sections/game";
-import Movies from "./Sections/movies";
+import Book from "./Sections/book";
 import Music from "./Sections/music";
 import Interpretation from "./Sections/interpretation";
 import styles from "./styles/Main.module.scss";
@@ -71,6 +71,7 @@ const Main = ({ ghazal, interpretation }: any) => {
         {<Game />}
         {<Particle />}
         {<Pictures />}
+        {<Book />}
         {<Interpretation />}
         {<Travel />}
         {<Gahdad />}

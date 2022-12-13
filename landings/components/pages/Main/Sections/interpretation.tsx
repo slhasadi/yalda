@@ -23,11 +23,11 @@ const Interpretation = () => {
             <p className="text-[18px]">{"(بازی)"}</p>
           </div>
           <p className=" px-3 text-[13px] md:text-[25px] text-white text-center">
-            شب یَلدا یا شب چلّه یکی از کهن‌ترین جشن‌های ایرانی است و از شامگاه
-            سه شنبه ۳۰ آذر تا بامداد روز اول دی ماه سال ۱۴۰۱ هست.
+            پیش‌بینی کنید و برنده جوایز ارزشمندی شوید! کافی است پیگیر اخبار
+            تیم‌ها باشید تا نتایج مسابقات
           </p>
           <div className="w-full h-[50px] relative flex justify-center items-center">
-            <Link href="https://ayneh.tika-team.ir/cafe/dream">
+            <Link href="/dream">
               <a
                 className="w-[50%] px-[5px] py-[10px] rounded-full text-center text-[18px] font-bold text-[#fff] bg-[#038652] absolute bottom-[0px]"
                 onClick={() =>

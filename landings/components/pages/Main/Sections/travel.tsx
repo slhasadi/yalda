@@ -15,8 +15,8 @@ const Travel = () => {
             <p className="text-[18px]">{"(تست روانشناسی)"}</p>
           </div>
           <p className=" px-3 text-[13px] md:text-[20px] text-white text-center my-2">
-            شب یَلدا یا شب چلّه یکی از کهن‌ترین جشن‌های ایرانی است و از شامگاه
-            سه شنبه ۳۰ آذر تا بامداد روز اول دی ماه سال ۱۴۰۱ هست.
+            پیش‌بینی کنید و برنده جوایز ارزشمندی شوید! کافی است پیگیر اخبار
+            تیم‌ها باشید تا نتایج مسابقات
           </p>
         </div>
         <div className="flex">
@@ -38,7 +38,7 @@ const Travel = () => {
                 </h3>
               </div>
               <div className="w-full h-[30px] relative flex justify-center items-center">
-                <Link href="https://ayneh.tika-team.ir/cafe/contest/14">
+                <Link href="/contest/14">
                   <a
                     className="w-[80%] px-[5px] py-[10px] rounded-full text-center text-[14px] md:text-[20px] font-bold text-[#fff] bg-[#038652] absolute bottom-[0px]"
                     onClick={() =>
@@ -74,7 +74,7 @@ const Travel = () => {
                 </h3>
               </div>
               <div className="w-full h-[30px] relative flex justify-center items-center">
-                <Link href="https://ayneh.tika-team.ir/cafe/contest/17">
+                <Link href="/contest/17">
                   <a
                     className="w-[80%] px-[5px] py-[10px] rounded-full text-center text-[14px] md:text-[20px] font-bold text-[#fff] bg-[#038652] absolute bottom-[0px]"
                     onClick={() =>
@@ -110,7 +110,7 @@ const Travel = () => {
                 </h3>
               </div>
               <div className="w-full h-[30px] relative flex justify-center items-center">
-                <Link href="https://ayneh.tika-team.ir/cafe/contest/16">
+                <Link href="/contest/16">
                   <a
                     className="w-[80%] px-[5px] py-[10px] rounded-full text-center text-[14px] md:text-[20px] font-bold text-[#fff] bg-[#038652] absolute bottom-[0px]"
                     onClick={() =>
